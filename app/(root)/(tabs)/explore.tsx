@@ -1,11 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Explore = () => {
   return (
-    <View>
-      <Text>Explore</Text>
-    </View>
+    <SafeAreaView className='h-full bg-white'>
+      <ScrollView  
+      showsVerticalScrollIndicator= {false}
+      contentContainerClassName='pb-32 px-7'>
+      <Text>explore</Text>
+      </ScrollView>
+          
+       </SafeAreaView>
   );
 };
 
