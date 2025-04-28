@@ -23,14 +23,14 @@ const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 
 // Create the GlobalProvider component
 export const GlobalProvider = ({ children }: { children: ReactNode }) => {
-  // Corrected call to useAppwrite
+ 
   const { data: user, loading, refetch } = useAppwrite({
     fn: getCurrentUser,
-    params: {} as Record<string, string | number> | undefined, // Allow undefined for params
+    params: {} as Record<string, string | number> | undefined, 
     skip: false,
   });
 
-  const resolvedUser = user ?? null; // Handle undefined or null user
+  const resolvedUser = user ?? null;
   const isLoggedIn = !!resolvedUser;
 
   // Log the user info for debugging purposes
@@ -51,7 +51,7 @@ export const GlobalProvider = ({ children }: { children: ReactNode }) => {
         isLoggedIn,
         user: resolvedUser,
         loading,
-        refetch: refetchWithDefaultParams,  // Use the wrapper here
+        refetch: refetchWithDefaultParams, 
       }}
     >
       {children}
