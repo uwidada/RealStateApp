@@ -5,6 +5,7 @@ import { View, Text, ScrollView, Image, TouchableOpacity, ImageSourcePropType, A
 import images from "../../../constants/images";
 import icons from "../../../constants/icons";
 import Search from "../../../components/search";
+import { Card, FeaturedCards } from "../../../components/cards";
 
 export default function Index() {
   return (
@@ -45,6 +46,8 @@ export default function Index() {
 
       </View>
       </View>
+      <FeaturedCards/>
+      <Card/>
       
     </SafeAreaView>
 
